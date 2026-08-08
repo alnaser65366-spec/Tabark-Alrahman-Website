@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>جميع المنتجات - شركة تبارك الرحمن (Worden)</title>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Tajawal Arabic Font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Tajawal', sans-serif;
+        }
+
+        body {
+            background-color: #f8fafc;
+            color: #1e293b;
+            direction: rtl;
+            text-align: right;
+        }
+
+        /* HEADER */
+        .site-header {
+            background: #ffffff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .brand-logo a {
+            text-decoration: none;
+        }
+
+        .brand-logo h1 {
+            font-size: 1.4rem;
+            color: #1e88e5;
+            font-weight: 800;
+        }
+
+        .brand-logo span {
+            font-size: 0.8rem;
+            color: #64748b;
+            display: block;
+            font-weight: 500;
+        }
+
+        .nav-call-btn {
+            background: #1e88e5;
+            color: #ffffff !important;
+            padding: 8px 18px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: background 0.3s;
+        }
+
+        .nav-call-btn:hover { background: #1565c0; }
+
+        /* PAGE HEADER BANNER */
+        .page-title-banner {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #ffffff;
+            padding: 40px 20px;
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 4px solid #1e88e5;
+        }
+
+        .page-title-banner h2 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+
+        .page-title-banner p {
+            color: #94a3b8;
+            font-size: 0.95rem;
+        }
+
+        /* MAIN PRODUCTS CATALOG */
+        .catalog-container {
+            max-width: 1200px;
+            margin: 0 auto 50px auto;
+            padding: 0 15px;
+        }
+
+        .products-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: flex-start;
+        }
+
+        .product-card {
+            flex: 1 1 260px;
+            max-width: 280px;
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+        }
+
+        .product-img {
+            width: 100%;
+            height: 220px;
+            background: #ffffff;
+            padding: 12px;
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        .product-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .product-details {
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .product-badge {
+            align-self: flex-start;
+            background: #e3f2fd;
+            color: #1e88e5;
+            font-size: 0.75rem;
+            font-weight: bold;
+            padding: 3px 8px;
+            border-radius: 6px;
+            margin-bottom: 8px;
+        }
+
+        .product-title {
+            font-size: 1rem;
+            font-weight: bold;
+            color: #1e293b;
+            margin-bottom: 6px;
+        }
+
+        .product-desc {
+            font-size: 0.82rem;
+            color: #64748b;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+
+        .product-action {
+            margin-top: auto;
+        }
+
+        .whatsapp-order-btn {
+            width: 100%;
+            background: #25d366;
+            color: #ffffff !important;
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 0.88rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            transition: background 0.2s;
+        }
+
+        .whatsapp-order-btn:hover { background: #20ba5a; }
+
+        /* FOOTER */
+        .site-footer {
+            background: #0f172a;
+            color: #94a3b8;
+            padding: 40px 0 20px 0;
+            margin-top: 50px;
+            border-top: 4px solid #1e88e5;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: space-between;
+        }
+
+        .footer-col { flex: 1 1 250px; }
+
+        .footer-col h3 {
+            color: #ffffff;
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            position: relative;
+            padding-bottom: 8px;
+        }
+
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 35px;
+            height: 3px;
+            background: #1e88e5;
+            border-radius: 2px;
+        }
+
+        .footer-col p { font-size: 0.85rem; line-height: 1.6; }
+
+        .footer-links { list-style: none; }
+        .footer-links li { margin-bottom: 10px; }
+        .footer-links a {
+            color: #94a3b8;
+            text-decoration: none;
+            font-size: 0.88rem;
+            transition: color 0.2s;
+        }
+        .footer-links a:hover { color: #ffffff; }
+
+        .contact-info-list { list-style: none; }
+        .contact-info-list li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.88rem;
+            margin-bottom: 12px;
+        }
+        .contact-info-list i { color: #1e88e5; }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 30px auto 0 auto;
+            padding: 20px 20px 0 20px;
+            border-top: 1px solid #1e293b;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #64748b;
+        }
+
+        .floating-whatsapp-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 9999;
+            background-color: #25d366;
+            color: #ffffff !important;
+            padding: 12px 20px;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.9rem;
+            box-shadow: 0 4px 18px rgba(37, 211, 102, 0.45);
+        }
+
+        @media (max-width: 768px) {
+            .product-card { max-width: 100%; flex: 1 1 100%; }
+        }
+         /* تنسيق الحاوية لتوسيط الأيقونات */
+.social-icons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+/* التنسيق المشترك لجميع الأزرار (الحجم والشكل والظلال) */
+.social-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    font-size: 22px;
+    color: #ffffff;
+    text-decoration: none;
+    background-color: var(--icon-color);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* تأثير الحركة عند تمرير الماوس فوق أي زر */
+.social-btn:hover {
+    transform: translateY(-5px);
+    filter: brightness(0.9);
+    box-shadow: 0 8px 15px var(--shadow-color);
+}
+
+/* الألوان الرسمية الخاصة بالفيسبوك */
+.facebook {
+    --icon-color: #1877F2;
+    --shadow-color: rgba(24, 119, 242, 0.3);
+}
+
+/* الألوان الرسمية الخاصة بالواتساب */
+.whatsapp {
+    --icon-color: #25D366;
+    --shadow-color: rgba(37, 211, 102, 0.3);
+}
+
+/* الألوان الرسمية الخاصة بلينكد إن */
+.linkedin {
+    --icon-color: #0A66C2;
+    --shadow-color: rgba(10, 102, 194, 0.3);
+}
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="header-container">
+            <div class="brand-logo">
+                <a href="index.html">
+                    <h1>شركة تبارك الرحمن</h1>
+                    <span>الوكيل المعتمد لماكينات الخياطة (Worden)</span>
+                </a>
+            </div>
+            <a href="index.html" class="nav-call-btn">
+                <i class="fas fa-home"></i> الرئيسية
+            </a>
+        </div>
+    </header>
+
+    <!-- TITLE BANNER -->
+    <section class="page-title-banner">
+        <h2>كتالوج ماكينات الخياطة وردن (Worden)</h2>
+        <p>استعرض جميع موديلات ماكينات الخياطة الصناعية المتوفرة لدينا مع إمكانية الطلب والمتابعة المباشرة</p>
+    </section>
+
+    <!-- ALL PRODUCTS CATALOG -->
+    <main class="catalog-container">
+        <!-- SEARCH BAR CONTAINER -->
+<div class="search-container" style="max-width: 500px; margin: 0 auto 30px auto; padding: 0 15px;">
+    <div style="position: relative;">
+        <input type="text" id="productSearchInput" placeholder="ابحث عن ماكينة (مثال: أوفرلوك، W6، عراوي)..." 
+               style="width: 100%; padding: 12px 45px 12px 15px; font-size: 0.95rem; border: 2px solid #e2e8f0; border-radius: 10px; outline: none; transition: border-color 0.3s;">
+        <i class="fas fa-search" style="position: absolute; right: 15px; top: 50%; transform: translateY(-50%); color: #94a3b8; font-size: 1.1rem;"></i>
+    </div>
+    
+    <!-- رسالة تظهر عند عدم وجود نتائج -->
+    <div id="noResultsMsg" style="display: none; text-align: center; padding: 30px 10px; color: #64748b;">
+        <i class="fas fa-search-minus" style="font-size: 2rem; color: #94a3b8; margin-bottom: 10px;"></i>
+        <p>عذراً، لم نجد أي ماكينة تطابق بحثك.</p>
+    </div>
+</div>
+        <div class="products-grid">
+
+            <!-- D4 -->
+            <div class="product-card">
+                <div class="product-img"><img src="website Images/w6.jpeg" alt="Worden W6"></div>
+                <div class="product-details">
+                    <span class="product-badge">ماكينة خياطة سنجر</span>
+                    <div class="product-title">ماكينة خياطة Worden W6</div>
+                    <div class="product-desc">شاشة لمس ذكية، سيرفو موتور موفر للطاقة 70%، نظام تزييت ونظافة متطور.</div>
+                    <div class="product-action">
+                        <a href="https://wa.me/201205454054?text=استفسار عن ماكينة Worden W6 (D4)" class="whatsapp-order-btn" target="_blank">
+                            <i class="fab fa-whatsapp"></i> أطلب عبر الواتساب
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- D5 -->
+            <div class="product-card">
+                <div class="product-img"><img src="website Images/D4.jpeg"></div>
+                <div class="product-details">
+                    <span class="product-badge">ماكينة خياطة كمبيوتر كامل </span>
+                    <div class="product-title">ماكينة خياطة Worden Smart</div>
+                    <div class="product-desc">تحكم كامل بالغرزة، لوحة رقمية سهلة الاستخدام، إضاءة LED متعددة الدرجات. </div>
+                    <div class="product-action">
+                        <a href="https://wa.me/201205454054?text=استفسار عن ماكينة Worden Smart (D5)" class="whatsapp-order-btn" target="_blank">
+                            <i class="fab fa-whatsapp"></i> أطلب عبر الواتساب
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- D6 -->
+            <div class="product-card">
+                <div class="product-img"><img src="website Images2/0303-D4 AM.jpeg" alt="Worden Gold Series"></div>
+                <div class="product-details">
+                    <span class="product-badge">سلسلة الضمان الذهبي</span>
+                    <div class="product-title">ماكينة سحب مزدوج كمبيوتر كامل</div>
+                    <div class="product-desc">مخصصة للأقمشة المتوسطة والثقيلة، أداء ثابت وسرعة تصل إلى 5000 غرزة/دقيقة.</div>
+                    <div class="product-action">
+                        <a href="https://wa.me/201205454054?text=استفسار عن ماكينة Worden Heavy Duty (D6)" class="whatsapp-order-btn" target="_blank">
+                            <i class="fab fa-whatsapp"></i> أطلب عبر الواتساب
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- D7 -->
+            <div class="product-card">
+                <div class="product-img"><img src="website Images2/GT90.jpeg" alt="Worden Overlock"></div>
+                <div class="product-details">
+                    <span class="product-badge">ماكينة أوفرلوك</span>
+                    <div class="product-title">ماكينة أوفرلوك وردن 4 فتلة</div>
+                    <div class="product-desc">سرعة عالية وحبك محكم للنسيج، مجهزة بموتور مدمج بدون صوت نهائياً.</div>
+                    <div class="product-action">
+                        <a href="https://wa.me/201205454054?text=استفسار عن ماكينة أوفرلوك 4 فتلة (D7)" class="whatsapp-order-btn" target="_blank">
+                            <i class="fab fa-whatsapp"></i> أطلب عبر الواتساب
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- D8 -->
+            <div class="product-card">
+                <div class="product-img"><img src="website Images/Arli.jpeg" alt="Worden Orley"></div>
+                <div class="product-details">
+                    <span class="product-badge">ماكينة أورليه</span>
+                    <div class="product-title">ماكينة أورليه كمبيوتر Worden</div>
+                    <div class="product-desc">تقفيل احترافي مع سيرفو موتور مدمج هادئ وقص فتلة أوتوماتيك.</div>
+                    <div class="product-action">
+                        <a href="https://wa.me/201205454054?text=استفسار عن ماكينة أورليه كمبيوتر (D8)" class="whatsapp-order-btn" target="_blank">
+                            <i class="fab fa-whatsapp"></i> أطلب عبر الواتساب
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- D9 -->
+            <div class="product-card">
+                <div class="product-img"><img src="website Images/ARAWE.jpeg" alt="Worden Eyelet"></div>
+                <div class="product-details">
+                    <span class="product-badge">ماكينة عراوي</span>
+                    <div class="product-title">ماكينة عراوي إلكترونية Worden</div>
+                    <div class="product-desc">دقة فائقة في عمل العراوي بمختلف المقاسات، إمكانية التعديل الرقمي للغرز.</div>
+                    <div class="product-action">
+                        <a href="https://wa.me/201205454054?text=استفسار عن ماكينة عراوي إلكترونية (D9)" class="whatsapp-order-btn" target="_blank">
+                            <i class="fab fa-whatsapp"></i> أطلب عبر الواتساب
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- D10 -->
+            <div class="product-card">
+                <div class="product-img"><img src="website Images/137.jpeg" alt="Worden Button Attaching"></div>
+                <div class="product-details">
+                    <span class="product-badge">ماكينة تركيب أزرار</span>
+                    <div class="product-title">ماكينة تركيب أزرار إلكترونية</div>
+                    <div class="product-desc">برمجة سريعة وأكثر من 30 شكل وتصميم لتثبيت الأزرار بقوة متناهية.</div>
+                    <div class="product-action">
+                        <a href="https://wa.me/201205454054?text=استفسار عن ماكينة تركيب أزرار (D10)" class="whatsapp-order-btn" target="_blank">
+                            <i class="fab fa-whatsapp"></i> أطلب عبر الواتساب
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- D11 -->
+            <div class="product-card">
+                <div class="product-img"><img src="website Images/JASMIGE.jpeg" alt="Worden Vertical Leather"></div>
+                <div class="product-details">
+                    <span class="product-badge">ماكينة جلود وشنط</span>
+                    <div class="product-title">ماكينة عمودية للجلود Worden</div>
+                    <div class="product-desc">قوة سحب جبارة مخصصة لتمكين الجلود الطبيعية والصناعية والشنط والقمم.</div>
+                    <div class="product-action">
+                        <a href="https://wa.me/201205454054?text=استفسار عن ماكينة عمودية للجلود (D11)" class="whatsapp-order-btn" target="_blank">
+                            <i class="fab fa-whatsapp"></i> أطلب عبر الواتساب
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- D12 -->
+            <div class="product-card">
+                <div class="product-img"><img src="website Images/D1.jpeg" alt="Worden Pattern Sewing"></div>
+                <div class="product-details">
+                    <span class="product-badge">ماكينة خياطة نص كمبيوتر WD-7800-D1</span>
+                    <div class="product-title">ماكينة كمبيوتر ماتور داخلي بسرعه تصل ل 5000ل\ث Worden</div>
+                    <div class="product-desc">تحكم في سرعه الماتور بصورة منتظمه مع تزييت اتوماتيك</div>
+                    <div class="product-action">
+                        <a href="https://wa.me/201205454054?text=استفسار عن ماكينة خياطه نص كمبيوتر D1  " class="whatsapp-order-btn" target="_blank">
+                            <i class="fab fa-whatsapp"></i> أطلب عبر الواتساب
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- D13 -->
+            <div class="product-card">
+                <div class="product-img"><img src="website Images2/SESOR.jpeg" alt="Worden Fabric Cutter"></div>
+                <div class="product-details">
+                    <span class="product-badge">مقصات قماش صناعية</span>
+                    <div class="product-title">مقص قماش اسطوانه Worden</div>
+                    <div class="product-desc">محرك نحاسي قوي للقص الكثيف متعدد الطبقات مع مثن سكين أوتوماتيكي.</div>
+                    <div class="product-action">
+                        <a href="https://wa.me/201205454054?text=استفسار عن مقص قماش اسطوانه (D13)" class="whatsapp-order-btn" target="_blank">
+                            <i class="fab fa-whatsapp"></i> أطلب عبر الواتساب
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>شركة تبارك الرحمن</h3>
+                <p>الوكيل المعتمد والأول لماكينات الخياطة الصناعية وردن (Worden). نقدم أحدث خطوط الإنتاج والحلول الذكية للمصانع والورش بأعلى جودة وأفضل ضمان.</p>
+            
+            </div>
+        
+            <div class="footer-col">
+                <h3>روابط السريعة</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html"><i class="fas fa-chevron-left"></i> الرئيسية</a></li>
+                    <li><a href="products.html"><i class="fas fa-chevron-left"></i> جميع المنتجات</a></li>
+                    <li><a href="tel:01205454054"><i class="fas fa-chevron-left"></i> اتصل بنا</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>تواصل معنا</h3>
+                <ul class="contact-info-list">
+                    <li><i class="fas fa-phone-alt"></i> <span>01205454054</span></li>
+                    <li><i class="fab fa-whatsapp"></i> <span>01205454054</span></li>
+                    <li><i class="fas fa-map-marker-alt"></i> <span>16 الرويعي - بجوار مسجد الرويعي - خلف صيدناوي - العتبه</span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>جميع الحقوق محفوظة &copy; 2026 لشركة تبارك الرحمن - الوكيل المعتمد لماكينات Worden</p>
+            <p class="developer-credit">صُنع بحب 💖 من Abdulrahman Suliman</p>
+        </div>
+         <!-- حاوية الأيقونات والروابط -->
+    <div class="social-icons">
+
+        <!-- رابط الفيسبوك -->
+        <a href="https://www.facebook.com/share/18pdydAiFW/" target="_blank" class="social-btn facebook" title="فيسبوك">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+
+        <!-- رابط الواتساب -->
+        <a href="https://wa.me/+249965366151" target="_blank" class="social-btn whatsapp" title="واتساب">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+
+        <!-- رابط لينكد إن -->
+        <a href="https://www.linkedin.com/in/abdulrahman-suliman-b66847246?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+            target="_blank" class="social-btn linkedin" title="لينكد إن">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+        </div>
+    </footer>
+
+    <!-- FLOATING WHATSAPP -->
+    <a href="https://wa.me/201205454054" class="floating-whatsapp-btn" target="_blank">
+        <i class="fab fa-whatsapp" style="font-size: 1.3rem;"></i>
+        <span>تواصل عبر واتساب</span>
+    </a>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const searchInput = document.getElementById('productSearchInput');
+        const productCards = document.querySelectorAll('.product-card');
+        const noResultsMsg = document.getElementById('noResultsMsg');
+
+        searchInput.addEventListener('input', (e) => {
+            const searchTerm = e.target.value.trim().toLowerCase();
+            let visibleCount = 0;
+
+            productCards.forEach(card => {
+                // البحث داخل العنوان، الوصف، والشارة (Badge)
+                const title = card.querySelector('.product-title')?.textContent.toLowerCase() || '';
+                const desc = card.querySelector('.product-desc')?.textContent.toLowerCase() || '';
+                const badge = card.querySelector('.product-badge')?.textContent.toLowerCase() || '';
+
+                if (title.includes(searchTerm) || desc.includes(searchTerm) || badge.includes(searchTerm)) {
+                    card.style.display = 'flex'; // إظهار الكارت
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none'; // إخفاء الكارت
+                }
+            });
+
+            // إظهار رسالة "لا توجد نتائج" إذا لم يطابق البحث أي منتج
+            if (visibleCount === 0) {
+                noResultsMsg.style.display = 'block';
+            } else {
+                noResultsMsg.style.display = 'none';
+            }
+        });
+    });
+    
+    // استبدال النص تلقائياً في الصفحة بالكامل عند التحميل
+    document.body.innerHTML = document.body.innerHTML
+        .replace(/Worden/g, 'WORLDEN')
+</script>
+</body>
+</html>
