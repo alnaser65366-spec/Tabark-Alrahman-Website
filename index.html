@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
+    <meta name="google-site-verification" content="asbXzLBv5oePG8CQWZZyM6xn3Azqh7l7mlP0ZvRa6Ck" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>شركة تبارك الرحمن - الوكيل المعتمد لماكينات الخياطة وردن (Worden)</title>
@@ -31,7 +33,7 @@
            ========================================== */
         .site-header {
             background: #ffffff;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -159,7 +161,7 @@
             -webkit-backdrop-filter: blur(8px);
             color: #ffffff !important;
             border: 1px solid rgba(255, 255, 255, 0.3);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
             transition: transform 0.2s, background 0.2s;
         }
 
@@ -167,9 +169,17 @@
             transform: translateY(-2px);
         }
 
-        .glass-btn.primary { background: rgba(30, 136, 229, 0.85); }
-        .glass-btn.secondary { background: rgba(245, 124, 0, 0.85); }
-        .glass-btn.outline { background: rgba(255, 255, 255, 0.25); }
+        .glass-btn.primary {
+            background: rgba(30, 136, 229, 0.85);
+        }
+
+        .glass-btn.secondary {
+            background: rgba(245, 124, 0, 0.85);
+        }
+
+        .glass-btn.outline {
+            background: rgba(255, 255, 255, 0.25);
+        }
 
         /* ==========================================
            3. INFINITE HORIZONTAL TICKER BAR (متحرك أفقياً)
@@ -187,7 +197,7 @@
             background: #ffffff;
             border-radius: 14px;
             border: 1px solid #e2e8f0;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
             padding: 14px 0;
             white-space: nowrap;
             position: relative;
@@ -239,8 +249,13 @@
         }
 
         @keyframes marqueeScroll {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(50%); }
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(50%);
+            }
         }
 
         /* ==========================================
@@ -281,7 +296,7 @@
             border: 1px solid #e2e8f0;
             border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
             transition: transform 0.3s, box-shadow 0.3s;
             display: flex;
             flex-direction: column;
@@ -289,7 +304,7 @@
 
         .product-card:hover {
             transform: translateY(-4px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
         }
 
         .product-img {
@@ -478,64 +493,85 @@
 
         /* RESPONSIVE */
         @media (max-width: 768px) {
-            .hero-slides-wrapper { height: 260px; }
-            .hero-caption-box h2 { font-size: 1.1rem; }
-            .hero-caption-box p { font-size: 0.78rem; }
-            .glass-btn { padding: 6px 14px; font-size: 0.78rem; }
-            .product-card { max-width: 100%; flex: 1 1 100%; }
-            .footer-col { flex: 1 1 100%; }
+            .hero-slides-wrapper {
+                height: 260px;
+            }
+
+            .hero-caption-box h2 {
+                font-size: 1.1rem;
+            }
+
+            .hero-caption-box p {
+                font-size: 0.78rem;
+            }
+
+            .glass-btn {
+                padding: 6px 14px;
+                font-size: 0.78rem;
+            }
+
+            .product-card {
+                max-width: 100%;
+                flex: 1 1 100%;
+            }
+
+            .footer-col {
+                flex: 1 1 100%;
+            }
         }
+
         /* تنسيق الحاوية لتوسيط الأيقونات */
-.social-icons {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    align-items: center;
-    padding: 40px;
-}
+        .social-icons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+        }
 
-/* التنسيق المشترك لجميع الأزرار (الحجم والشكل والظلال) */
-.social-btn {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 55px;
-    height: 55px;
-    border-radius: 50%;
-    font-size: 22px;
-    color: #ffffff;
-    text-decoration: none;
-    background-color: var(--icon-color);
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
+        /* التنسيق المشترك لجميع الأزرار (الحجم والشكل والظلال) */
+        .social-btn {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            font-size: 22px;
+            color: #ffffff;
+            text-decoration: none;
+            background-color: var(--icon-color);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
 
-/* تأثير الحركة عند تمرير الماوس فوق أي زر */
-.social-btn:hover {
-    transform: translateY(-5px);
-    filter: brightness(0.9);
-    box-shadow: 0 8px 15px var(--shadow-color);
-}
+        /* تأثير الحركة عند تمرير الماوس فوق أي زر */
+        .social-btn:hover {
+            transform: translateY(-5px);
+            filter: brightness(0.9);
+            box-shadow: 0 8px 15px var(--shadow-color);
+        }
 
-/* الألوان الرسمية الخاصة بالفيسبوك */
-.facebook {
-    --icon-color: #1877F2;
-    --shadow-color: rgba(24, 119, 242, 0.3);
-}
+        /* الألوان الرسمية الخاصة بالفيسبوك */
+        .facebook {
+            --icon-color: #1877F2;
+            --shadow-color: rgba(24, 119, 242, 0.3);
+        }
 
-/* الألوان الرسمية الخاصة بالواتساب */
-.whatsapp {
-    --icon-color: #25D366;
-    --shadow-color: rgba(37, 211, 102, 0.3);
-}
+        /* الألوان الرسمية الخاصة بالواتساب */
+        .whatsapp {
+            --icon-color: #25D366;
+            --shadow-color: rgba(37, 211, 102, 0.3);
+        }
 
-/* الألوان الرسمية الخاصة بلينكد إن */
-.linkedin {
-    --icon-color: #0A66C2;
-    --shadow-color: rgba(10, 102, 194, 0.3);
-}
+        /* الألوان الرسمية الخاصة بلينكد إن */
+        .linkedin {
+            --icon-color: #0A66C2;
+            --shadow-color: rgba(10, 102, 194, 0.3);
+        }
     </style>
 </head>
+
 <body>
 
     <!-- 1. HEADER -->
@@ -554,13 +590,14 @@
     <!-- 2. HERO SLIDER BANNER -->
     <section class="hero-top-banner">
         <div class="hero-slides-wrapper" id="heroBannerSlider">
-            
+
             <div class="hero-slide active">
                 <img src="website Images/w6.jpeg" alt="شركة تبارك الرحمن">
                 <div class="hero-caption-box">
                     <h2>شركة تبارك الرحمن</h2>
                     <p>الوكيل المعتمد لماكينات الخياطة وردن (Worden)</p>
-                    <a href="https://wa.me/201205454054" class="glass-btn primary"><i class="fas fa-shopping-cart"></i> أطلب الآن</a>
+                    <a href="https://wa.me/201205454054" class="glass-btn primary"><i class="fas fa-shopping-cart"></i>
+                        أطلب الآن</a>
                 </div>
             </div>
 
@@ -587,7 +624,8 @@
                 <div class="hero-caption-box">
                     <h2>ماكينات أوفرلوك شديدة التحمل</h2>
                     <p>أداء فائق للإنتاج الكثيف والأقمشة الثقيلة</p>
-                    <a href="https://wa.me/201205454054" class="glass-btn primary"><i class="fas fa-shopping-cart"></i> أطلب الآن</a>
+                    <a href="https://wa.me/201205454054" class="glass-btn primary"><i class="fas fa-shopping-cart"></i>
+                        أطلب الآن</a>
                 </div>
             </div>
 
@@ -596,7 +634,8 @@
                 <div class="hero-caption-box">
                     <h2>ماكينات أورليه كمبيوتر كاملة</h2>
                     <p>دقة عالية وتقفيل فلات احترافي</p>
-                    <a href="https://wa.me/201205454054" class="glass-btn primary"><i class="fas fa-shopping-cart"></i> أطلب الآن</a>
+                    <a href="https://wa.me/201205454054" class="glass-btn primary"><i class="fas fa-shopping-cart"></i>
+                        أطلب الآن</a>
                 </div>
             </div>
 
@@ -614,7 +653,8 @@
                 <div class="hero-caption-box">
                     <h2>ماكينات تركيب أزرار إلكترونية</h2>
                     <p>أكثر من 30 شكل مختلف للغرزة</p>
-                    <a href="https://wa.me/201205454054" class="glass-btn primary"><i class="fas fa-shopping-cart"></i> أطلب الآن</a>
+                    <a href="https://wa.me/201205454054" class="glass-btn primary"><i class="fas fa-shopping-cart"></i>
+                        أطلب الآن</a>
                 </div>
             </div>
 
@@ -631,8 +671,9 @@
                 <img src="website Images/D1.jpeg" alt="ماكينات  خياطه نص كمبيوتر WD-7800-D1">
                 <div class="hero-caption-box">
                     <h2>ماكينه خياطه نص كمبيوتر </h2>
-                    <p>دقة متناهية وتحكم في السرعه  بصورة مرنه </p>
-                    <a href="https://wa.me/201205454054" class="glass-btn primary"><i class="fas fa-shopping-cart"></i> أطلب الآن</a>
+                    <p>دقة متناهية وتحكم في السرعه بصورة مرنه </p>
+                    <a href="https://wa.me/201205454054" class="glass-btn primary"><i class="fas fa-shopping-cart"></i>
+                        أطلب الآن</a>
                 </div>
             </div>
 
@@ -652,7 +693,7 @@
     <section class="marquee-section">
         <div class="marquee-container">
             <div class="marquee-track">
-                
+
                 <div class="marquee-item">
                     <div class="marquee-icon"><i class="fas fa-shield-alt"></i></div>
                     <div class="marquee-text">
@@ -725,20 +766,22 @@
     <section class="products-section">
         <div class="section-header">
             <h2>أحدث ماكينات وردن (Worden)</h2>
-            <a href="products.html" style="background:#1e88e5; color:#fff; text-decoration:none; padding:8px 16px; border-radius:8px; font-weight:bold; font-size:0.85rem; display:inline-flex; align-items:center; gap:6px;">
+            <a href="products.html"
+                style="background:#1e88e5; color:#fff; text-decoration:none; padding:8px 16px; border-radius:8px; font-weight:bold; font-size:0.85rem; display:inline-flex; align-items:center; gap:6px;">
                 <i class="fas fa-th-large"></i> عرض جميع المنتجات
             </a>
         </div>
-        
+
         <div class="products-grid">
-            
+
             <div class="product-card">
                 <div class="product-img"><img src="website Images2/D2.jpeg" alt="Worden WD-7800-D2"></div>
                 <div class="product-details">
                     <div class="product-title">ماكينة خياطة Worden D2</div>
                     <div class="product-desc">، موفرة للطاقة 70%، قطع فتلة أوتوماتيك.</div>
                     <div class="product-action">
-                        <a href="https://wa.me/201205454054?text=استفسار عن ماكينة Worden D2" class="whatsapp-order-btn" target="_blank">
+                        <a href="https://wa.me/201205454054?text=استفسار عن ماكينة Worden D2" class="whatsapp-order-btn"
+                            target="_blank">
                             <i class="fab fa-whatsapp"></i> أطلب عبر الواتساب
                         </a>
                     </div>
@@ -751,7 +794,8 @@
                     <div class="product-title">ماكينة أوفرلوك 4 فتلة</div>
                     <div class="product-desc">سرعة عالية للأقمشة الثقيلة والمتوسطة مع إضاءة LED.</div>
                     <div class="product-action">
-                        <a href="https://wa.me/201205454054?text=استفسار عن ماكينة أوفرلوك 4 فتلة" class="whatsapp-order-btn" target="_blank">
+                        <a href="https://wa.me/201205454054?text=استفسار عن ماكينة أوفرلوك 4 فتلة"
+                            class="whatsapp-order-btn" target="_blank">
                             <i class="fab fa-whatsapp"></i> أطلب عبر الواتساب
                         </a>
                     </div>
@@ -764,7 +808,8 @@
                     <div class="product-title">ماكينة أورليه كمبيوتر</div>
                     <div class="product-desc">تقفيل احترافي مع سيرفو موتور مدمج هادئ للغاية.</div>
                     <div class="product-action">
-                        <a href="https://wa.me/201205454054?text=استفسار عن ماكينة أورليه كمبيوتر" class="whatsapp-order-btn" target="_blank">
+                        <a href="https://wa.me/201205454054?text=استفسار عن ماكينة أورليه كمبيوتر"
+                            class="whatsapp-order-btn" target="_blank">
                             <i class="fab fa-whatsapp"></i> أطلب عبر الواتساب
                         </a>
                     </div>
@@ -777,7 +822,8 @@
                     <div class="product-title">ماكينة عمودية للجلود</div>
                     <div class="product-desc">مخصصة لتصنيع الشنط والجلود الطبيعية بقوة سحب جبارة.</div>
                     <div class="product-action">
-                        <a href="https://wa.me/201205454054?text=استفسار عن ماكينة عمودية للجلود" class="whatsapp-order-btn" target="_blank">
+                        <a href="https://wa.me/201205454054?text=استفسار عن ماكينة عمودية للجلود"
+                            class="whatsapp-order-btn" target="_blank">
                             <i class="fab fa-whatsapp"></i> أطلب عبر الواتساب
                         </a>
                     </div>
@@ -790,31 +836,32 @@
     <!-- 5. FOOTER -->
     <footer class="site-footer">
         <div class="footer-container">
-            
+
             <div class="footer-col">
                 <h3>شركة تبارك الرحمن</h3>
-                <p>الوكيل المعتمد والأول لماكينات الخياطة الصناعية وردن (Worden). نقدم أحدث خطوط الإنتاج والحلول الذكية للمصانع والورش بأعلى جودة وأفضل ضمان.</p>
-                         <!-- حاوية الأيقونات والروابط -->
-    <div class="social-icons">
+                <p>الوكيل المعتمد والأول لماكينات الخياطة الصناعية وردن (Worden). نقدم أحدث خطوط الإنتاج والحلول الذكية
+                    للمصانع والورش بأعلى جودة وأفضل ضمان.</p>
+                <!-- حاوية الأيقونات والروابط -->
+                <div class="social-icons">
 
-        <!-- رابط الفيسبوك -->
-        <a href="https://www.facebook.com/share/1EjsymotF4/" target="_blank" class="social-btn facebook" title="فيسبوك">
-            <i class="fab fa-facebook-f"></i>
-        </a>
+                    <!-- رابط الفيسبوك -->
+                    <a href="https://www.facebook.com/share/1EjsymotF4/" target="_blank" class="social-btn facebook"
+                        title="فيسبوك">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
 
-        <!-- رابط الواتساب -->
-        <a href="https://wa.me/+201205454054" target="_blank" class="social-btn whatsapp" title="واتساب">
-            <i class="fab fa-whatsapp"></i>
-        </a>
+                    <!-- رابط الواتساب -->
+                    <a href="https://wa.me/+201205454054" target="_blank" class="social-btn whatsapp" title="واتساب">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
 
-        <!-- رابط لينكد إن -->
-        <a href=""
-            target="_blank" class="social-btn linkedin" title="لينكد إن">
-            <i class="fab fa-linkedin-in"></i>
-        </a>
-        </div>
+                    <!-- رابط لينكد إن -->
+                    <a href="" target="_blank" class="social-btn linkedin" title="لينكد إن">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
             </div>
-     
+
 
             <div class="footer-col">
                 <h3>روابط السريعة</h3>
@@ -830,7 +877,8 @@
                 <ul class="contact-info-list">
                     <li><i class="fas fa-phone-alt"></i> <span>01205454054</span></li>
                     <li><i class="fab fa-whatsapp"></i> <span>01205454054</span></li>
-                    <li><i class="fas fa-map-marker-alt"></i> <span> 16 الرويعي - بجوار مسجد الرويعي - خلف صيدناوي - العتبه</span></li>
+                    <li><i class="fas fa-map-marker-alt"></i> <span> 16 الرويعي - بجوار مسجد الرويعي - خلف صيدناوي -
+                            العتبه</span></li>
                 </ul>
             </div>
 
@@ -838,27 +886,28 @@
 
         <div class="footer-bottom">
             <p>جميع الحقوق محفوظة &copy; 2026 لشركة تبارك الرحمن - الوكيل المعتمد لماكينات Worden</p>
-               <p class="developer-credit">صُنع بحب 💖 من Abdulrahman Suliman</p>
-    </div>
+            <p class="developer-credit">صُنع بحب 💖 من Abdulrahman Suliman</p>
+        </div>
 
-    <!-- حاوية الأيقونات والروابط -->
-    <div class="social-icons">
+        <!-- حاوية الأيقونات والروابط -->
+        <div class="social-icons">
 
-        <!-- رابط الفيسبوك -->
-        <a href="https://www.facebook.com/share/18pdydAiFW/" target="_blank" class="social-btn facebook" title="فيسبوك">
-            <i class="fab fa-facebook-f"></i>
-        </a>
+            <!-- رابط الفيسبوك -->
+            <a href="https://www.facebook.com/share/18pdydAiFW/" target="_blank" class="social-btn facebook"
+                title="فيسبوك">
+                <i class="fab fa-facebook-f"></i>
+            </a>
 
-        <!-- رابط الواتساب -->
-        <a href="https://wa.me/+249965366151" target="_blank" class="social-btn whatsapp" title="واتساب">
-            <i class="fab fa-whatsapp"></i>
-        </a>
+            <!-- رابط الواتساب -->
+            <a href="https://wa.me/+249965366151" target="_blank" class="social-btn whatsapp" title="واتساب">
+                <i class="fab fa-whatsapp"></i>
+            </a>
 
-        <!-- رابط لينكد إن -->
-        <a href="https://www.linkedin.com/in/abdulrahman-suliman-b66847246?utm_source=share_via&utm_content=profile&utm_medium=member_android"
-            target="_blank" class="social-btn linkedin" title="لينكد إن">
-            <i class="fab fa-linkedin-in"></i>
-        </a>
+            <!-- رابط لينكد إن -->
+            <a href="https://www.linkedin.com/in/abdulrahman-suliman-b66847246?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+                target="_blank" class="social-btn linkedin" title="لينكد إن">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
         </div>
     </footer>
 
@@ -881,10 +930,11 @@
                 }, 3500);
             }
         });
-        
-    // استبدال النص تلقائياً في الصفحة بالكامل عند التحميل
-    document.body.innerHTML = document.body.innerHTML
-        .replace(/Worden/g, 'WORLDEN')
+
+        // استبدال النص تلقائياً في الصفحة بالكامل عند التحميل
+        document.body.innerHTML = document.body.innerHTML
+            .replace(/Worden/g, 'WORLDEN')
     </script>
 </body>
+
 </html>
